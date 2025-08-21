@@ -1,56 +1,60 @@
-<h1>Investment Form</h1>
-<form [formGroup]="investment" class="investment_form">
-    <app-input
-        [type]="'select'"
-        [label]="'Asset Type'"
-        [control]="assetType"
-        [options]="assetTypes"
-        [isRequired]="true"
-        [errorMessage]="getErrorMessage('assetType')"
-        [placeholder]="'Select Asset Type'"
-    ></app-input>
+<section>
+    <h1>Investment Form</h1>
+    <form [formGroup]="investment" class="investment_form">
+        <app-input
+            [type]="'select'"
+            [label]="'Asset Type'"
+            [control]="assetType"
+            [options]="assetTypes"
+            [isRequired]="true"
+            [errorMessage]="getErrorMessage('assetType')"
+            [placeholder]="'Select Asset Type'"
+        ></app-input>
 
-    <app-input
-        [type]="'text'" 
-        [label]="'Symbol'"
-        [control]="symbol"
-        [placeholder]="'AAPL/VOO/BTC'"
-        [isRequired]="true"
-        [errorMessage]="getErrorMessage('symbol')"
-    >
-    </app-input>
+        <app-input
+            [type]="'text'" 
+            [label]="'Symbol'"
+            [control]="symbol"
+            [placeholder]="'AAPL/VOO/BTC'"
+            [isRequired]="true"
+            [errorMessage]="getErrorMessage('symbol')"
+        >
+        </app-input>
 
-    <app-input
-        [type]="'number'" 
-        [label]="'Quantity'"
-        [control]="quantity"
-        [isRequired]="true"
-        [minLength]="2"
-        onlyNumber
-        [errorMessage]="getErrorMessage('quantity')"
-    >
-    </app-input>
+        <app-input
+            [type]="'number'" 
+            [label]="'Quantity'"
+            [control]="quantity"
+            [isRequired]="true"
+            [minLength]="2"
+            onlyNumber
+            [errorMessage]="getErrorMessage('quantity')"
+        >
+        </app-input>
 
-    <app-input
-        [type]="'number'" 
-        [label]="'Purchase Price'"
-        [control]="purchasePrice"
-        [isRequired]="true"
-        [maxLength]="3"
-        onlyNumber
-        [errorMessage]="getErrorMessage('purchasePrice')"
-    >
-    </app-input>
+        <app-input
+            [type]="'number'" 
+            [label]="'Purchase Price'"
+            [control]="purchasePrice"
+            [isRequired]="true"
+            [maxLength]="3"
+            onlyNumber
+            [errorMessage]="getErrorMessage('purchasePrice')"
+        >
+        </app-input>
 
-    <app-input
-        [type]="'date'" 
-        [label]="'Purchase Date'"
-        [control]="purchaseDate"
-    >
-    </app-input>
+        <app-input
+            [type]="'date'" 
+            [label]="'Purchase Date'"
+            [control]="purchaseDate"
+            [isRequired]="true"
+            [errorMessage]="getErrorMessage('purchaseDate')"
+        >
+        </app-input>
 
-    <app-button 
-        [text]="'Submit'"        
-        (handleClick)="isSubmit()">
-    </app-button><!--[disabled]="investment.invalid"-->
-</form>
+        <app-button 
+            [text]="'Submit'"        
+            (handleClick)="isSubmit()">
+        </app-button><!--[disabled]="investment.invalid"-->
+    </form>
+</section>

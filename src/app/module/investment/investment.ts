@@ -38,14 +38,14 @@ export class Investment implements OnInit{
       symbol: ['',[Validators.required]],
       quantity: ['', [Validators.required, Validators.minLength(2)]],
       purchasePrice: ['', [Validators.required, Validators.maxLength(3)]],
-      purchaseDate: [''],
+      purchaseDate: ['', [Validators.required]],
     });
 
-    this.assetType = this.investment.get('assetType') as FormControl;
-    this.symbol = this.investment.get('symbol') as FormControl;
-    this.quantity = this.investment.get('quantity') as FormControl;
-    this.purchasePrice = this.investment.get('purchasePrice') as FormControl;
-    this.purchaseDate = this.investment.get('purchaseDate') as FormControl;
+    this.assetType = this.getControl('assetType');
+    this.symbol = this.getControl('symbol');
+    this.quantity = this.getControl('quantity');
+    this.purchasePrice = this.getControl('purchasePrice');
+    this.purchaseDate = this.getControl('purchaseDate');
   }
 
   public getControl(name: string): FormControl {
@@ -76,14 +76,12 @@ export class Investment implements OnInit{
 
   public isSubmit() {
     if (this.investment.invalid) {
-      this.investment.markAllAsTouched();  // Mark all controls as touched
+      this.investment.markAllAsTouched();
       return;
-    }
+    }  
 
-  
+    console.log(this.investment.value);
 
-  console.log(this.investment.value);
-
-  this.investment.reset();
+    this.investment.reset();
   }
 }
