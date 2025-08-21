@@ -1,0 +1,25 @@
+<div class="loginForm">
+    <div>
+        <h1>Login Form</h1>
+        <form [formGroup]="loginForm">
+            <app-input
+                [type]="'text'" 
+                [label]="'FirstName'"
+                [control]="userName"
+            >        
+            </app-input>
+            <br>
+            <app-input
+                [type]="'password'" 
+                [label]="'Password'"
+                [control]="passWord"
+            >        
+            </app-input>
+            <app-button 
+                [text]="'Login'" 
+                (handleClick)="isLogin()">
+            </app-button>
+        </form>
+    </div>
+</div>
+<router-outlet />

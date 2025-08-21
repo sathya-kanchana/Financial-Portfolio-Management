@@ -1,0 +1,19 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" [opened]="true" class="sidenav">
+        <nav class="sidenav">
+            <ul>
+            <li>
+                <a routerLink="dashboard" routerLinkActive="active">Dashboard</a>
+            </li>
+            <li>
+                <a routerLink="investment" routerLinkActive="active">Investment Form</a>
+            </li>
+            </ul>
+        </nav>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+

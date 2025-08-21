@@ -1,0 +1,19 @@
+h1 {
+    background: #dfdfdf;
+    padding: 20px;
+    margin: 0;
+}
+
+.investment_form {
+    margin: 20px;
+    width: 500px;
+    border: 1px solid #dfdfdf;
+    padding: 10px;
+    border-radius: 10px;
+
+    app-input {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

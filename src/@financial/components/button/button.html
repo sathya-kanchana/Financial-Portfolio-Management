@@ -1,1 +1,3 @@
-<p>button works!</p>
+<button mat-raised-button color="primary" (click)="clickButton($event)" [disabled]="disabled">
+    <span *ngIf="text" class="text">{{ text }}</span>
+</button>
