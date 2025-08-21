@@ -9,6 +9,7 @@ import { MatSelectModule } from '@angular/material/select';
 
 @Component({
   selector: 'app-input',
+  standalone: true,
   imports: [
     CommonModule,
     ReactiveFormsModule,

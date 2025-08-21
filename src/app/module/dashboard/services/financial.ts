@@ -29,8 +29,7 @@ export class Financial {
         { name: 'S&P 500', value: 3.1 },
       ],
     };
-
-    // simulate an API call with mock data
+    
     return of(mockData);
   }
 }
