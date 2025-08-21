@@ -1,0 +1,32 @@
+h1 {
+      background: #dfdfdf;
+    padding: 20px;
+    margin: 0;
+}
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  padding: 0;
+  margin: 20px;
+
+  .chart {
+    height: 400px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+}
+
+// .dashboard {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+//   gap: 10px;
+//   padding: 0;
+
+//   .chart {
+//     height: 400px; 
+//     width: 100%;
+//   }
+// }
+
